@@ -48,11 +48,11 @@ class BaseWorker(Process):
         self.should_exit.set()
 
     def parent_is_alive(self):
-        if os.getppid() == 1:
-            logger.info(
-                "Parent process has gone away, exiting process {}!".format(
-                    os.getpid()))
-            return False
+        # if os.getppid() == 1:
+        #     logger.info(
+        #         "Parent process has gone away, exiting process {}!".format(
+        #             os.getpid()))
+        #     return False
         return True
 
 
